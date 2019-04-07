@@ -16,7 +16,6 @@ public class ProductAggregator {
         HashMap<String, SupplyReply> bestSupplies = new HashMap<>();
 
         for (int i = 0; i < supplyReplies.size(); i++) {
-            System.out.println(supplyReplies.get(i).getProductCode());
 
             // if productCode already present
             if(bestSupplies.containsKey(supplyReplies.get(i).getProductCode())) {

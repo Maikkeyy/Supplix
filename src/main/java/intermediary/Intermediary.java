@@ -63,6 +63,12 @@ public class Intermediary {
                             List<SupplyReply> bestSuppliesPerOrder = entry.getValue();
 
                             ConfirmedOrder order = new ConfirmedOrder(key, bestSuppliesPerOrder);
+
+
+                            for (int i = 0; i < supplyReplyList.size(); i++) {
+                                System.out.println(serializer.classToString(supplyReplyList.get(i)));
+                            }
+
                             sendConfirmedOrder(order);
                         }
 
@@ -79,9 +85,9 @@ public class Intermediary {
     private static void sendConfirmedOrder(ConfirmedOrder order) {
         try (Connection connection = factory.newConnection();
              Channel channel = connection.createChannel()) {
-            channel.exchangeDeclare(EXCHANGE_NAME, "fanout");
+            channel.queueDeclare(EXCHANGE_NAME, false, false, false, null);
 
-            channel.basicPublish(EXCHANGE_NAME, "", null, serializer.classToString(order).getBytes());
+            channel.basicPublish("", EXCHANGE_NAME, null, serializer.classToString(order).getBytes());
             System.out.println(" [x] Sent confirmedOrder for orderId: '" + order.getOrderId() + "'");
 
         } catch (UnsupportedEncodingException e) {

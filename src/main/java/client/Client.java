@@ -17,6 +17,7 @@ public class Client {
     private static Splitter splitter;
     private static Serializer serializer;
     private static ConnectionFactory factory = new ConnectionFactory();
+    private static Random rand = new Random();
 
     public Client() throws IOException, TimeoutException {
         splitter = new Splitter();
@@ -31,17 +32,22 @@ public class Client {
 
         DeliverCallback deliverCallback = (consumerTag, delivery) -> {
             String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received '" + message + "'");
 
             ConfirmedOrder order = (ConfirmedOrder) serializer.classFromString(message, ConfirmedOrder.class);
             List<SupplyReply> supplyReplies = order.getSupplyReplies();
-            Integer totalDeliveryTime =
+            Integer totalDeliveryTime = 0;
 
             System.out.println("[o] Received confirmed order (" + order.getOrderId() + ")");
-            System.out.println("[o] ... with a total deliveryTime of:" +);
+
             for(int i = 0; i < supplyReplies.size(); i++) {
-                System.out.println();
+                if(supplyReplies.get(i).getDeliveryTime() > totalDeliveryTime) {
+                    totalDeliveryTime = supplyReplies.get(i).getDeliveryTime();
+                }
+
+                System.out.println(serializer.classToString(supplyReplies.get(i)));
             }
+
+            System.out.println("[o] ... with a total deliveryTime of:" + totalDeliveryTime);
 
         };
         channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> {
@@ -55,11 +61,17 @@ public class Client {
 //                    String.join(" ", args);
 
             List<String> pCodes = new ArrayList<>();
-            pCodes.add("C100");
-            pCodes.add("C55");
-            pCodes.add("C22");
+//            pCodes.add("C100");
+//            pCodes.add("C55");
+//            pCodes.add("C22");
 
-            Order order = new Order(pCodes);
+        for (int i = 0; i < 10; i++) { // filling inventory
+            String pCode = "C" + rand.nextInt(1001);
+            pCodes.add(pCode);
+        }
+
+
+        Order order = new Order(pCodes);
             splitter.sendOrder(order);
     }
 }
