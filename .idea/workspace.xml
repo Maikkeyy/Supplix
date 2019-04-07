@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f2730bd1-eb73-4cc3-a71c-cecdd5415ed1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/supplier/LaunchSuppliers.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intermediary/Intermediary.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/intermediary/Intermediary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/intermediary/ProductAggregator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/intermediary/ProductAggregator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/ConfirmedOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/ConfirmedOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/supplier/Supplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/supplier/Supplier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/client/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/client/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/intermediary/Intermediary$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/intermediary/Intermediary$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/intermediary/Intermediary.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/intermediary/Intermediary.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/intermediary/OrderAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/intermediary/OrderAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/intermediary/ProductAggregator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/intermediary/ProductAggregator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/supplier/Supplier.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/supplier/Supplier.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -39,11 +27,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
               <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="15">
+                <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -86,18 +86,6 @@
                 <element signature="e#1160#1161#0" expanded="true" />
                 <element signature="e#1216#1217#0" expanded="true" />
                 <element signature="e#1264#1265#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/client/Splitter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" selection-start-line="15" selection-end-line="17" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -195,6 +183,7 @@
         <option value="$PROJECT_DIR$/src/main/java/supplier/LaunchSuppliers.java" />
         <option value="$PROJECT_DIR$/src/main/java/supplier/Supplier.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -291,7 +280,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554662100625" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554662209921" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -403,12 +392,12 @@
       <workItem from="1554310816337" duration="1659000" />
       <workItem from="1554371727382" duration="8524000" />
       <workItem from="1554566193735" duration="3548000" />
-      <workItem from="1554634149554" duration="17334000" />
+      <workItem from="1554634149554" duration="17480000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31065000" />
+    <option name="totallyTimeSpent" value="31211000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1720" y="27" width="1719" height="1339" extended-state="4" />
@@ -592,6 +581,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="7" lean-forward="true" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="15">
+            <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
